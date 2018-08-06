@@ -9,9 +9,16 @@ config.plugins = config.plugins.concat([
     'process.env': {
       'NODE_ENV': JSON.stringify('production'),
       'BABEL_ENV': 'production'
-    }}),
+    }
+  }),
 ]);
-config.stats = 'errors-only';
+config.stats = {
+  all: false,
+  errors: true,
+  errorDetails: true,
+  assets: true,
+  builtAt: true,
+};
 config.optimization = {
   minimizer: [
     new UglifyJsPlugin()

@@ -34,7 +34,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      'window.jQuery': 'jquery',
+      React: 'react',
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
@@ -48,5 +49,5 @@ module.exports = {
       'node_modules'
     ],
     extensions: ['.js', '.jsx']
-  }
+  },
 };
