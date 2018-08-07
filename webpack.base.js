@@ -3,10 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {
-    'js/bundle.min.js': './src/index',
-    'css/style.min.css': './src/styles/app.scss'
-  },
+  entry: './src/index',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -24,12 +21,7 @@ module.exports = {
           {loader: 'style-loader'},
           {loader: 'css-loader'},
           {loader: 'postcss-loader'},
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [path.resolve(__dirname, "node_modules/foundation-sites/scss")]
-            }
-          }
+          {loader: 'sass-loader',}
         ]
       }
     ]
@@ -54,4 +46,7 @@ module.exports = {
     ],
     extensions: ['.js', '.jsx']
   },
+  devtool: process.env.NODE_ENV === 'development'
+    ? 'cheap-module-eval-source-map'
+    : undefined
 };

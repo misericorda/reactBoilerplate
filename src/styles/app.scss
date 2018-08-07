@@ -1,6 +1,6 @@
 @import "base/variables";
+@import "base/bootstrap_customize";
 
-h1{
-  transition: all .5s;
-}
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 
