@@ -3,7 +3,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/index'],
+  entry: {
+    'js/bundle.min.js': './src/index',
+    'css/style.min.css': './src/styles/app.scss'
+  },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -20,6 +23,7 @@ module.exports = {
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
+          {loader: 'postcss-loader'},
           {
             loader: 'sass-loader',
             options: {
