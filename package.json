@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "set NODE_ENV=development&&node server.js",
-    "dev": "set NODE_ENV=development&&webpack-dev-server --hot --config webpack.local.js --port 3000",
-    "build": "set NODE_ENV=production&&webpack --config webpack.production.js",
-    "getProdStats": "set NODE_ENV=production&&webpack --profile --json > webpack-stats.json --config webpack.production.js"
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "build:prod": "webpack -p --env=prod",
+    "build:dev": "webpack-dev-server -d --hot --port 3000 --env=dev"
   },
   "browserslist": ["ie >= 8", "last 4 version"],
   "devDependencies": {
