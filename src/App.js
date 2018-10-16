@@ -1,7 +1,6 @@
-import React, {Component, PureComponent} from 'react';
-import {Provider} from 'react-redux'
-import {hot} from 'react-hot-loader';
-import AppRouter from './router/index.jsx';
+import {Provider} from "react-redux";
+import {hot} from "react-hot-loader";
+import AppRouter from "./router/index.jsx";
 
 const App = props => (
   <Provider store={props.store}>
@@ -9,4 +8,4 @@ const App = props => (
   </Provider>
 );
 
-export default module.hot ? hot(module)(App) : App
+export default module.hot ? hot(module)(App) : App;

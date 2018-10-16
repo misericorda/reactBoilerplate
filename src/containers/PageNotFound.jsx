@@ -3,10 +3,10 @@ class PageNotFound extends React.Component {
     return (
       <div>
         <h3>Page not found</h3>
-        <div>The page "<strong>{this.props.match.url}</strong>" does not exist.</div>
+        <div>The page <strong>{this.props.match.url}</strong> does not exist.</div>
       </div>
-    )
+    );
   }
 }
 
-export default PageNotFound
+export default PageNotFound;

@@ -1,7 +1,7 @@
-import {Route, Redirect, Switch, Router} from 'react-router-dom'
-import PageNotFound from '../containers/PageNotFound'
-import Wrapper from '../containers/Wrapper'
-import history from './history';
+import {Route, Switch, Router} from "react-router-dom";
+import PageNotFound from "../containers/PageNotFound";
+import Wrapper from "../containers/Wrapper";
+import history from "./history";
 
 const AppRouter = () => {
   return (
@@ -14,6 +14,6 @@ const AppRouter = () => {
         </Switch>
       </Wrapper>
     </Router>
-  )
+  );
 };
-export default AppRouter
+export default AppRouter;
