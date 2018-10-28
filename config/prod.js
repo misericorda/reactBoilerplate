@@ -1,14 +1,20 @@
 const webpack = require("webpack");
 const commonConfig = require("./common");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const CompressionPlugin = require("compression-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-module.exports = function(configDirs) {
+module.exports = function (configDirs) {
   // Adds everything from `common.js` to a new object called prodConfig
   let config = Object.assign({}, commonConfig(configDirs));
+  config.output.filename = "[name]-[hash].js";
+  config.output.publicPath = configDirs.USE_DJANGO ? "/static" : "";
 
   config.plugins = config.plugins.concat([
+    new CleanWebpackPlugin(["dist"], {
+      root: configDirs.ROOT_DIR,
+    }),
     new webpack.DefinePlugin({
       "process.env": {
         "NODE_ENV": JSON.stringify("production"),

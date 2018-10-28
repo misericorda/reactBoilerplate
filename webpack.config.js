@@ -2,10 +2,14 @@ const path = require("path");
 
 const BUILD_DIR = path.resolve(__dirname, "./dist");
 const APP_DIR = path.resolve(__dirname, "./src");
+const ROOT_DIR = path.resolve(__dirname, "");
+const USE_DJANGO = true;
 
 const configDirs = {
-  BUILD_DIR: BUILD_DIR,
-  APP_DIR: APP_DIR
+  BUILD_DIR,
+  APP_DIR,
+  ROOT_DIR,
+  USE_DJANGO
 };
 
 function buildConfig(env) {

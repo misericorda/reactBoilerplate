@@ -1,0 +1,6 @@
+export const AUTH_START_LOGIN = "AUTH_START_LOGIN";
+export const AUTH_START_LOGOUT = "AUTH_START_LOGOUT";
+export const AUTH_LOG_IN = "AUTH_LOG_IN";
+export const AUTH_LOG_OUT = "AUTH_LOG_OUT";
+export const AUTH_SET_LOADING = "AUTH_SET_LOADING";
+
