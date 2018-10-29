@@ -7,10 +7,11 @@ import configureStore from "./store/configureStore";
 import App from "./App";
 import "./styles/app.scss";
 
+
 // Add needed FA icons
 // Can be used later as
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// <FontAwesomeIcon icon={['far', iconClassName]}/>
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// <FontAwesomeIcon icon={["far", iconClassName]}/>
 library.add(faSquare, faCheckSquare);
 
 // create store

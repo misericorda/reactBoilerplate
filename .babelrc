@@ -10,11 +10,13 @@
         },
         "production": {
           "plugins": [
+            ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }],
             ["transform-class-properties", { "loose": true }]
           ]
         },
         "development": {
           "plugins": [
+            ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }],
             "react-hot-loader/babel",
             ["transform-class-properties", { "loose": true }]
           ]

@@ -1,5 +1,15 @@
 @import "base/variables";
 @import "base/bootstrap_customize";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/utilities";
+@import "~antd/dist/antd.css";
 
-@import "~bootstrap/scss/bootstrap.scss";
+.lh64 {
+  line-height: 64px;
+}
 
+.ant-menu-item .ant-btn .anticon {
+  margin-right: 0;
+}
